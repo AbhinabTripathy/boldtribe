@@ -154,7 +154,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/assets/Desktop - 39.png" alt="Team Member 8" className="w-full h-full object-cover" />
+              <img src="/public/assets/suman.jpeg" alt="Team Member 8" className="w-full h-full object-cover" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Lead Generation</span>
