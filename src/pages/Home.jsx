@@ -95,10 +95,10 @@ const Home = () => {
       <section className="py-12 sm:py-16 px-4 bg-[#0a0a0a]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Our Team</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-10 sm:gap-30 justify-center mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-5">
             {/* Team Member Cards */}
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/sivasish.JPG" alt="Team Member 1" className="w-full h-full object-cover" />
+              <img src="/public/assets/sivasish.JPG" alt="Team Member 1" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Founder</span>
@@ -106,7 +106,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/Abinab.JPG" alt="Team Member 2" className="w-full h-full object-cover" />
+              <img src="/public/assets/Abinab.JPG" alt="Team Member 2" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Founder</span>
@@ -114,7 +114,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/rajesh.JPG" alt="Team Member 3" className="w-full h-full object-cover" />
+              <img src="/public/assets/RajeshPP.jpg" alt="Team Member 3" className="w-full h-full object-cover object-center scale-130" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior Application Developer</span>
@@ -122,7 +122,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/Nikita.JPG" alt="Team Member 4" className="w-full h-full object-cover" />
+              <img src="/public/assets/Nikita.JPG" alt="Team Member 4" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior UI/UX Deginer</span>
@@ -130,7 +130,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/assets/face image.png" alt="Team Member 5" className="w-full h-full object-cover" />
+              <img src="/assets/face image.png" alt="Team Member 5" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior Backend Developer</span>
@@ -138,7 +138,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/Abinab.JPG" alt="Team Member 6" className="w-full h-full object-cover" />
+              <img src="/public/assets/Abinab.JPG" alt="Team Member 6" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior Frontend Developer</span>
@@ -146,7 +146,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/suvendu.jpeg" alt="Team Member 7" className="w-full h-full object-cover" />
+              <img src="/public/assets/suvendu.jpeg" alt="Team Member 7" className="w-full h-full object-cover object-center scale-149" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Technical Project Coordinator</span>
@@ -154,7 +154,7 @@ const Home = () => {
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/suman.jpeg" alt="Team Member 8" className="w-full h-full object-cover" />
+              <img src="/public/assets/suman.jpeg" alt="Team Member 8" className="w-full h-full object-cover object-center scale-149" />
               <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full w-full">
                   <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Lead Generation</span>
