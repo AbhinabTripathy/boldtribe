@@ -236,7 +236,7 @@ const Home = () => {
                 lineHeight: 1,
                 position: 'absolute',
                 top: -20,
-                right: 0,
+                right: 50,
                 zIndex: 10
               }}>
               {currentStep}

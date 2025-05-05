@@ -20,14 +20,14 @@ const Navbar = () => {
         <div className="px-3 sm:px-4 py-1.5">
           <nav className="flex items-center justify-between w-full">
             {/* Logo and Navigation Links */}
-            <div className="flex items-center space-x-16">
+            <div className="flex items-center gap-8 md:gap-14 w-full">
               <img 
-                src="/assets/Boldtribe logo.png" 
+                src="../../public/assets/Boldtribe logo-4.svg" 
                 alt="BoldTribe" 
-                className="h-8 sm:h-10"
+                className="h-12 sm:h-14 md:h-16 w-auto"
               />
               {/* Desktop Menu */}
-              <div className="hidden md:flex items-center space-x-20">
+              <div className="hidden md:flex items-center gap-10 md:gap-14 lg:gap-20 ml-4">
                 <Link 
                   to="/" 
                   className={`transition-colors text-base font-bold ${isActive('/') ? 'text-[#E9442B] drop-shadow-[0_2px_4px_rgba(233,68,43,0.3)]' : 'text-black'}`}
