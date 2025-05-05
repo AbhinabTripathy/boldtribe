@@ -22,7 +22,7 @@ const Navbar = () => {
             {/* Logo and Navigation Links */}
             <div className="flex items-center gap-8 md:gap-14 w-full">
               <img 
-                src="../../public/assets/Boldtribe logo-4.svg" 
+                src="../../public/assets/Boldtribe brand kit (1) 2.svg" 
                 alt="BoldTribe" 
                 className="h-12 sm:h-14 md:h-16 w-auto"
               />
