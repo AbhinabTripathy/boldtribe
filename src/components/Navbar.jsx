@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
       {/* Mobile Menu Panel */}
       {isMenuOpen && (
-        <div className="md:hidden absolute z-50 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden py-2">
+        <div className="md:hidden absolute z-[999] top-full left-0 mt-2 w-full min-w-[200px] rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-visible py-2">
           <div className="px-4 py-2 flex flex-col space-y-3">
             <Link 
               to="/" 
