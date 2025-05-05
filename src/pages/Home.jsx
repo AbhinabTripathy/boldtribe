@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { useState, useEffect } from 'react';
+import { abhinab, arpita, manoranjan, nikita, rajesh, sivasish, suman, suvendu } from '../../public';
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -149,56 +150,56 @@ const Home = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-5">
             {/* Team Member Cards */}
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/sivasish.JPG" alt="Team Member 1" className="w-full h-full object-cover object-center scale-149 mt-50" />
+              <img src={sivasish} alt="Team Member 1" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Sivasish Bebartta</span>
                 <span className="text-white text-sm md:text-base">Founder</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/Abinab.JPG" alt="Team Member 2" className="w-full h-full object-cover object-center scale-149 mt-50" />
+              <img src={abhinab} alt="Team Member 2" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Abinab Tripathy</span>
                 <span className="text-white text-sm md:text-base">Founder</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/RajeshPP.jpg" alt="Team Member 3" className="w-full h-full object-cover object-center scale-130" />
+              <img src={rajesh} alt="Team Member 3" className="w-full h-full object-cover object-center scale-130" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Rajesh Kumar Pattanaik</span>
                 <span className="text-white text-sm md:text-base">Junior Application Developer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/Nikita.JPG" alt="Team Member 4" className="w-full h-full object-cover object-center scale-149 mt-50" />
+              <img src={nikita} alt="Team Member 4" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Nikita Pradhan</span>
                 <span className="text-white text-sm md:text-base">Junior UI/UX Designer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/assets/face image.png" alt="Team Member 5" className="w-full h-full object-cover object-center scale-149 mt-50" />
+              <img src={manoranjan} alt="Team Member 5" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Manoranjan Basantia</span>
                 <span className="text-white text-sm md:text-base">Junior Backend Developer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/Abinab.JPG" alt="Team Member 6" className="w-full h-full object-cover object-center scale-149 mt-50" />
+              <img src={arpita} alt="Team Member 6" className="w-full h-full object-cover object-center scale-149 mt-50" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Arpita Singh</span>
                 <span className="text-white text-sm md:text-base">Junior Frontend Developer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/suvendu.jpeg" alt="Team Member 7" className="w-full h-full object-cover object-center scale-149" />
+              <img src={suvendu} alt="Team Member 7" className="w-full h-full object-cover object-center scale-149" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Suvendu Kumar Rath</span>
                 <span className="text-white text-sm md:text-base">Technical Project Coordinator</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
-              <img src="/public/assets/suman.jpeg" alt="Team Member 8" className="w-full h-full object-cover object-center scale-149" />
+              <img src={suman} alt="Team Member 8" className="w-full h-full object-cover object-center scale-149" />
               <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white font-bold text-base md:text-lg">Suman Sahoo</span>
                 <span className="text-white text-sm md:text-base">Lead Generation</span>
