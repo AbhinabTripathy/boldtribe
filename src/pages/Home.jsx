@@ -1,14 +1,65 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { useState, useEffect } from 'react';
 
 const Home = () => {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [isStep3Complete, setIsStep3Complete] = useState(false);
+
+  useEffect(() => {
+    // Automatic step transition with 10 second intervals
+    const stepInterval = setInterval(() => {
+      setCurrentStep((prevStep) => {
+        if (prevStep < 3) {
+          return prevStep + 1;
+        } else {
+          // Loop back to step 1 after step 3
+          return 1;
+        }
+      });
+    }, 10000); // Change step every 10 seconds
+
+    return () => clearInterval(stepInterval);
+  }, []);
+
+  const getStepContent = () => {
+    switch (currentStep) {
+      case 1:
+        return {
+          title: "Step 1",
+          subtitle: "Connect & Discover",
+          description: "We start with a quick consultation to understand your goals and challenges. Based on this, we create a tailored proposal just for you"
+        };
+      case 2:
+        return {
+          title: "Step 2",
+          subtitle: "Plan & Set Up",
+          description: "After finalizing the agreement, we set up your account and share a clear roadmap to get started smoothly"
+        };
+      case 3:
+        return {
+          title: "Step 3",
+          subtitle: "Execute & Support",
+          description: "Your services go live with dedicated support to ensure everything runs perfectly. We continuously refine our solutions based on your feedback"
+        };
+      default:
+        return {
+          title: "Step 1",
+          subtitle: "Connect & Discover",
+          description: "We start with a quick consultation to understand your goals and challenges. Based on this, we create a tailored proposal just for you"
+        };
+    }
+  };
+
+  const content = getStepContent();
+
   return (
     <div className="bg-[#0a0a0a] text-white min-h-screen">
       {/* Hero Section */}
       <section className="pt-0 pb-16 px-4 relative overflow-hidden grid-background">
         <div className="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center justify-center min-h-[60vh]">
-          <div className="mb-16 sm:mb-24 w-full">
+          <div className="mb-16 sm:mb-24 w-full mt-8">
             <Navbar />
           </div>
           <div className="flex flex-col md:flex-row items-center justify-center w-full gap-10 md:gap-24">
@@ -68,9 +119,9 @@ const Home = () => {
                     <h3 className="text-2xl font-bold mb-3 text-white">Branding & Design</h3>
                     <p className="text-gray-200 text-base mb-0">We craft premium digital work for web, mobile and experiential with creative agencies and global brands alike – putting passion, pride and plenty of elbow</p>
                   </div>
-                  <button className="mt-6 px-5 py-2 rounded-full bg-white/20 text-white text-sm font-semibold border border-white/30 hover:bg-white/30 transition flex items-center w-max backdrop-blur-md">
+                  <Link to="/services" className="mt-6 px-5 py-2 rounded-full bg-white/20 text-white text-sm font-semibold border border-white/30 hover:bg-white/30 transition flex items-center w-max backdrop-blur-md">
                     Learn more <span className="ml-2">→</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
               {/* Card 3 */}
@@ -81,9 +132,9 @@ const Home = () => {
                     <h3 className="text-2xl font-bold mb-3 text-white">AI & Blockchain</h3>
                     <p className="text-gray-200 text-base mb-0">Revolutionizing industries with the power of AI & Blockchain. Unlock smarter solutions and secure, transparent systems to drive innovation, enhance efficiency, and create trust-driven ecosystems for your business growth.</p>
                   </div>
-                  <button className="mt-6 px-5 py-2 rounded-full bg-white/20 text-white text-sm font-semibold border border-white/30 hover:bg-white/30 transition flex items-center w-max backdrop-blur-md">
+                  <Link to="/services" className="mt-6 px-5 py-2 rounded-full bg-white/20 text-white text-sm font-semibold border border-white/30 hover:bg-white/30 transition flex items-center w-max backdrop-blur-md">
                     Learn more <span className="ml-2">→</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -99,66 +150,58 @@ const Home = () => {
             {/* Team Member Cards */}
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/sivasish.JPG" alt="Team Member 1" className="w-full h-full object-cover object-center scale-149 mt-50" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Founder</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Sivasish Bebartta</span>
+                <span className="text-white text-sm md:text-base">Founder</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/Abinab.JPG" alt="Team Member 2" className="w-full h-full object-cover object-center scale-149 mt-50" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Founder</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Abinab Tripathy</span>
+                <span className="text-white text-sm md:text-base">Founder</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/RajeshPP.jpg" alt="Team Member 3" className="w-full h-full object-cover object-center scale-130" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior Application Developer</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Rajesh Kumar Pattanaik</span>
+                <span className="text-white text-sm md:text-base">Junior Application Developer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/Nikita.JPG" alt="Team Member 4" className="w-full h-full object-cover object-center scale-149 mt-50" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior UI/UX Deginer</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Nikita Pradhan</span>
+                <span className="text-white text-sm md:text-base">Junior UI/UX Designer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/assets/face image.png" alt="Team Member 5" className="w-full h-full object-cover object-center scale-149 mt-50" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior Backend Developer</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Manoranjan Basantia</span>
+                <span className="text-white text-sm md:text-base">Junior Backend Developer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/Abinab.JPG" alt="Team Member 6" className="w-full h-full object-cover object-center scale-149 mt-50" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Junior Frontend Developer</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Arpita Singh</span>
+                <span className="text-white text-sm md:text-base">Junior Frontend Developer</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/suvendu.jpeg" alt="Team Member 7" className="w-full h-full object-cover object-center scale-149" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Technical Project Coordinator</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Suvendu Kumar Rath</span>
+                <span className="text-white text-sm md:text-base">Technical Project Coordinator</span>
               </div>
             </div>
             <div className="team-card aspect-square overflow-hidden bg-gradient-to-b from-gray-800 to-gray-900 group relative">
               <img src="/public/assets/suman.jpeg" alt="Team Member 8" className="w-full h-full object-cover object-center scale-149" />
-              <div className="absolute top-0 right-0 h-full w-2/3 bg-black/80 flex items-center pl-4 pr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-center h-full w-full">
-                  <span className="text-white font-bold text-base md:text-lg whitespace-nowrap transform rotate-90">Lead Generation</span>
-                </div>
+              <div className="absolute bottom-0 left-0 w-full h-1/3 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white font-bold text-base md:text-lg">Suman Sahoo</span>
+                <span className="text-white text-sm md:text-base">Lead Generation</span>
               </div>
             </div>
           </div>
@@ -166,41 +209,45 @@ const Home = () => {
       </section>
 
       {/* Onboarding Process */}
-      <section className="py-0 px-0 relative bg-[#18191d]">
-        <div className="max-w-7xl mx-auto">
-          <div className="w-full bg-[#18191d] pt-12 pb-0">
-            <h2 className="text-2xl md:text-3xl font-bold mb-0 text-center text-white">Onboarding Process</h2>
-          </div>
-          <div className="w-full flex flex-col md:flex-row items-center justify-center min-h-[600px] bg-[#18191d] px-0 md:px-0">
-            {/* Left: Icon + Ellipses */}
-            <div className="flex flex-col items-center justify-center w-full md:w-1/2 relative" style={{ marginRight: '100px', marginBottom: '32px' }}>
-              <img 
-                src="/assets/Vector.png"
-                alt="Connect & Discover Icon" 
-                className="w-[340px] h-[340px] md:w-[400px] md:h-[400px] z-10" 
-                style={{ filter: 'drop-shadow(0 0 15px #facc15)' }}
-              />
-              {/* Ellipses */}
-              <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center ellipse-rotate" style={{ perspective: '500px', marginBottom: '32px' }}>
-                <div className="absolute w-[300px] h-[90px] md:w-[400px] md:h-[120px] border-2 border-gray-400 rounded-full opacity-50" style={{ transform: 'rotateX(75deg) translateZ(-20px)', filter: 'blur(0.5px)' }}></div>
-                <div className="absolute w-[350px] h-[105px] md:w-[480px] md:h-[140px] border-2 border-gray-400 rounded-full opacity-30" style={{ transform: 'rotateX(75deg) translateZ(-40px)', filter: 'blur(0.5px)' }}></div>
-                <div className="absolute w-[400px] h-[120px] md:w-[560px] md:h-[160px] border-2 border-gray-400 rounded-full opacity-20" style={{ transform: 'rotateX(75deg) translateZ(-60px)', filter: 'blur(0.5px)' }}></div>
-              </div>
+      <section id="onboarding-section" className="py-0 px-0 relative bg-[#18191d] min-h-screen flex items-center justify-center">
+        <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center min-h-[600px] px-4 md:px-0">
+          {/* Left: Icon + Ellipses */}
+          <div className="flex flex-col items-center justify-center w-full md:w-1/2 relative h-full mb-8 md:mb-0">
+            <img 
+              src="/assets/Vector.png"
+              alt="Connect & Discover Icon" 
+              className="w-[220px] h-[220px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] z-10" 
+              style={{ filter: 'drop-shadow(0 0 15px #facc15)' }}
+            />
+            {/* Ellipses */}
+            <div className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center ellipse-rotate" style={{ perspective: '500px', marginBottom: '16px' }}>
+              <div className="absolute w-[180px] h-[54px] sm:w-[250px] sm:h-[75px] md:w-[400px] md:h-[120px] border-2 border-gray-400 rounded-full opacity-50" style={{ transform: 'rotateX(75deg) translateZ(-20px)', filter: 'blur(0.5px)' }}></div>
+              <div className="absolute w-[210px] h-[63px] sm:w-[300px] sm:h-[90px] md:w-[480px] md:h-[140px] border-2 border-gray-400 rounded-full opacity-30" style={{ transform: 'rotateX(75deg) translateZ(-40px)', filter: 'blur(0.5px)' }}></div>
+              <div className="absolute w-[240px] h-[72px] sm:w-[350px] sm:h-[105px] md:w-[560px] md:h-[160px] border-2 border-gray-400 rounded-full opacity-20" style={{ transform: 'rotateX(75deg) translateZ(-60px)', filter: 'blur(0.5px)' }}></div>
             </div>
-            {/* Right: Text + Number, grouped and aligned as in image */}
-            <div className="flex flex-col justify-center items-center w-full md:w-1/2 mt-20 md:mt-0" style={{ marginLeft: '-100px' }}>
-              <div className="flex flex-row items-center justify-center w-full max-w-xl">
-                {/* Text block */}
-                <div className="flex flex-col items-start justify-center text-left mr-4 md:mr-8" style={{ minWidth: '270px', marginLeft: "200px", marginBottom: "90px" }}>
-                  <span className="text-white text-[28px] md:text-[40px] font-semibold mb-2 tracking-wide">Step 1</span>
-                  <span className="text-gray-200 text-lg md:text-xl mb-4 tracking-wide">Connect & Discover</span>
-                  <span className="text-gray-200 text-base md:text-lg leading-8 tracking-wide" style={{ letterSpacing: '0.02em', maxWidth: '340px' }}>
-                    We start with a quick consultation to understand your goals and challenges. Based on this, we create a tailored proposal just for you
-                  </span>
-                </div>
-                {/* Large 1 */}
-                <span className="text-yellow-400 text-[240px] md:text-[340px] font-bold leading-none ml-2 md:ml-4" style={{ fontFamily: 'inherit', opacity: 1, lineHeight: 1, alignSelf: 'center', marginBottom: "400px", marginRight: "300px" }}>1</span>
-              </div>
+          </div>
+          {/* Right: Step Content */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-start relative h-full pl-0 md:pl-8" style={{ minHeight: '320px' }}>
+            {/* Large Number */}
+            <span className="text-yellow-400 text-[100px] sm:text-[140px] md:text-[180px] lg:text-[260px] font-bold leading-none transition-all duration-1000 ease-in-out"
+              style={{
+                fontFamily: 'inherit',
+                opacity: 1,
+                lineHeight: 1,
+                position: 'absolute',
+                top: -20,
+                right: 0,
+                zIndex: 10
+              }}>
+              {currentStep}
+            </span>
+            {/* Step Texts */}
+            <div className="flex flex-col mt-[80px] sm:mt-[100px] md:mt-[180px] max-w-full sm:max-w-[420px] mx-auto md:mx-0 px-2 sm:px-0" style={{ marginRight: '0px', marginBottom: '40px', fontSize: "18px" }}>
+              <span className="text-white text-2xl sm:text-4xl md:text-6xl font-semibold mb-2 tracking-wide transition-all duration-1000 ease-in-out">{content.title}</span>
+              <span className="text-gray-200 text-base sm:text-lg md:text-xl mb-4 tracking-wide transition-all duration-1000 ease-in-out">{content.subtitle}</span>
+              <span className="text-gray-200 text-sm sm:text-base md:text-lg leading-8 tracking-wide transition-all duration-1000 ease-in-out" style={{ letterSpacing: '0.02em' }}>
+                {content.description}
+              </span>
             </div>
           </div>
         </div>
@@ -208,33 +255,13 @@ const Home = () => {
       
 
       {/* Testimonials */}
-      <section className="py-12 sm:py-16 px-4 relative">
-        <div className="max-w-7xl mx-auto">
+      <section id="testimonials-section" className="py-12 sm:py-16 px-4 relative">
+        <div className="max-w-[1600px] mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-center">Testimonials</h2>
           <p className="text-lg sm:text-xl mb-8 sm:mb-12 text-gray-400 text-center">People are talking.</p>
           <div className="relative">
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center">
-              <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-600 flex items-center justify-center text-yellow-400">
-                <span className="sr-only">Previous</span>
-                ←
-              </button>
-              <div className="flex-1">
-                <div className="testimonial-card p-6 sm:p-8 relative mx-auto max-w-3xl">
-                  <div className="absolute -top-4 -right-4 w-12 sm:w-16 h-12 sm:h-16 bg-yellow-400 rounded-full opacity-20" />
-                  <p className="text-gray-300 italic mb-4 text-sm sm:text-base">
-                    "The team at Boldtribe is exceptional. They transformed our vision into reality with precision and creativity."
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gray-700" />
-                    <p className="font-medium text-sm sm:text-base">Alex Johnson</p>
-                  </div>
-                </div>
-                <img src="/assets/stone image.png" alt="Marble Surface" className="w-full max-w-3xl mx-auto mt-4" />
-              </div>
-              <button className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-gray-600 flex items-center justify-center text-yellow-400">
-                <span className="sr-only">Next</span>
-                →
-              </button>
+            <div className="flex flex-col items-center">
+              <img src="/assets/stone image.png" alt="Marble Surface" className="w-full max-w-[1600px] mx-auto" />
             </div>
           </div>
         </div>
