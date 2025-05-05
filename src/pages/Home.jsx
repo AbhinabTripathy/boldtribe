@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { useState, useEffect } from 'react';
-import { abhinab, arpita, manoranjan, nikita, rajesh, sivasish, suman, suvendu } from '../../public';
+import { abhinab, arpita, code, manoranjan, nikita, rajesh, sivasish, suman, suvendu, vector1, webdveloper, whatsapp } from '../../public';
 
 const Home = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -88,7 +88,7 @@ const Home = () => {
       {/* Services Section */}
       <section className="py-20 px-4 relative overflow-hidden min-h-[700px] flex items-center justify-center" style={{ background: 'rgba(0,0,0,0.7)' }}>
         {/* Blurred tribe background - correct path and stacking */}
-        <img src="/public/assets/tribe.jpg" alt="Tribe Background" className="absolute inset-0 w-full h-full object-cover object-center z-0" style={{ filter: 'blur(0.5px) brightness(1)' }} />
+        <img src={code} alt="Tribe Background" className="absolute inset-0 w-full h-full object-cover object-center z-0" style={{ filter: 'blur(0.5px) brightness(1)' }} />
         <div className="absolute inset-0 bg-black bg-opacity-60 z-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto relative z-20 flex flex-col items-center w-full">
           {/* Heading and Subheading */}
@@ -101,7 +101,7 @@ const Home = () => {
             {/* Top Card */}
             <div className="w-full max-w-3xl">
               <div className="relative rounded-[32px] overflow-hidden shadow-2xl flex flex-col min-h-[220px] max-h-[260px] backdrop-blur-xl bg-white/10 border border-white/20" style={{boxShadow:'0 8px 32px 0 rgba(31,38,135,0.37)'}}>
-                <img src="/public/assets/Visual/Icon Isogrid.png" alt="App & Web Dev BG" className="absolute inset-0 w-full h-full object-cover object-top opacity-70 z-0" style={{ marginLeft: '300px', marginBottom: '1000px' }} />
+                <img src={webdveloper} alt="App & Web Dev BG" className="absolute inset-0 w-full h-full object-cover object-top opacity-70 z-0" style={{ marginLeft: '300px', marginBottom: '1000px' }} />
                 <div className="relative z-10 p-8 flex flex-col h-full justify-between">
                   <div>
                     <h3 className="text-2xl font-bold mb-3 text-white">App & Web Development</h3>
@@ -272,7 +272,7 @@ const Home = () => {
       <section className="py-12 sm:py-16 px-4 text-center relative">
         <div className="max-w-7xl mx-auto">
           <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-6 sm:mb-8">
-            <img src="/public/assets/Vector-5.png" alt="Editor Icon" className="w-full h-full object-contain" />
+            <img src={vector1} alt="Editor Icon" className="w-full h-full object-contain" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
             Bring your ideas to life in an intuitive visual editor.
@@ -283,7 +283,7 @@ const Home = () => {
             className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 partner-button rounded-full hover:opacity-90 transition-all"
           >
             PARTNER WITH US
-            <img src="/public/assets/whatsapp icon.png" alt="WhatsApp" className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+            <img src={whatsapp} alt="WhatsApp" className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
           </Link>
         </div>
       </section>
