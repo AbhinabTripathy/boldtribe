@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import Navbar from '../components/Navbar';
+import { author, author2, author3, author4, pic, pic2, pic3, pic4 } from '../../public';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -12,8 +13,8 @@ const Blog = () => {
       category: "Technology",
       author: "Tracey Wilson",
       date: "August 20, 2022",
-      image: "/assets/Desktop - 38.png",
-      authorImage: "/assets/Desktop - 36.png"
+      image: pic2,
+      authorImage: author2 
     },
     {
       id: 2,
@@ -21,8 +22,8 @@ const Blog = () => {
       category: "Technology",
       author: "Jason Francisco",
       date: "August 20, 2022",
-      image: "/assets/image 73.png",
-      authorImage: "/assets/Desktop - 37.png"
+      image: pic3,
+      authorImage: author
     },
     {
       id: 3,
@@ -30,17 +31,8 @@ const Blog = () => {
       category: "Technology",
       author: "Elizabeth Slavin",
       date: "August 20, 2022",
-      image: "/assets/image 75.png",
-      authorImage: "/assets/Desktop - 38.png"
-    },
-    {
-      id: 4,
-      title: "The Impact of Technology on the Workplace: How Technology is Changing",
-      category: "Technology",
-      author: "Ernie Smith",
-      date: "August 20, 2022",
-      image: "/assets/Desktop - 39.png",
-      authorImage: "/assets/Desktop - 39.png"
+      image: pic4,
+      authorImage: author3
     }
   ];
 
@@ -53,18 +45,22 @@ const Blog = () => {
           <div className="mb-8 sm:mb-12">
             <Navbar />
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-between mb-6 sm:mb-8 gap-4">
+          <div className="relative flex items-center justify-center w-full max-w-5xl mx-auto py-4">
             {/* Theme Toggle (Left) */}
-            <button className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-              </svg>
-            </button>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2">
+              <button className="w-16 h-12 bg-blue-600 rounded-full flex items-center justify-start pl-2 shadow-md">
+                <span className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
 
             {/* Page Title (Center) */}
-            <div className="text-center order-first sm:order-none w-full sm:w-auto">
+            <div className="flex flex-col items-center justify-center mx-auto">
               <h1 className="text-2xl sm:text-3xl font-bold">Page Title</h1>
-              <div className="flex items-center justify-center gap-2 text-gray-400 mt-2">
+              <div className="flex items-center justify-center gap-2 text-gray-400 mt-1">
                 <Link to="/" className="hover:text-white text-sm sm:text-base">Home</Link>
                 <span>|</span>
                 <span className="text-sm sm:text-base">Link One</span>
@@ -72,16 +68,16 @@ const Blog = () => {
             </div>
 
             {/* Search Bar (Right) */}
-            <div className="relative w-full sm:w-auto">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-64 max-w-full">
               <input
                 type="text"
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full sm:w-64 px-3 sm:px-4 py-2 bg-gray-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                className="w-full px-4 py-2 bg-[#232432] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400 text-base pr-10"
               />
               <button className="absolute right-3 top-1/2 -translate-y-1/2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
               </button>
@@ -95,7 +91,7 @@ const Blog = () => {
         {/* Featured Blog Post */}
         <div className="relative rounded-2xl overflow-hidden mb-8 sm:mb-12 group">
           <img 
-            src="/assets/Desktop - 38.png" 
+            src={pic} 
             alt="Featured Blog" 
             className="w-full h-[200px] sm:h-[300px] md:h-[400px] object-cover"
           />
@@ -109,7 +105,7 @@ const Blog = () => {
             </h2>
             <div className="flex items-center gap-2 sm:gap-4">
               <img 
-                src="/assets/Desktop - 36.png" 
+                src={author4} 
                 alt="Author" 
                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full"
               />
