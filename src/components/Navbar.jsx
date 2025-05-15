@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative group w-full max-w-3xl mx-auto">
+    <div className="relative group w-full max-w-4xl mx-auto">
       <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
       <div className="relative bg-white rounded-full overflow-hidden ring-1 ring-gray-900/5">
         <div className="px-3 sm:px-4 py-1.5">
@@ -31,26 +31,26 @@ const Navbar = () => {
               <div className="hidden md:flex items-center gap-10 md:gap-14 lg:gap-20 ml-4">
                 <Link 
                   to="/" 
-                  className={`transition-colors text-base font-bold ${isActive('/') ? 'text-[#E9442B] drop-shadow-[0_2px_4px_rgba(233,68,43,0.3)]' : 'text-black'}`}
+                  className={`transition-colors text-base font-bold whitespace-nowrap ${isActive('/') ? 'text-[#E9442B] drop-shadow-[0_2px_4px_rgba(233,68,43,0.3)]' : 'text-black'}`}
                   style={isActive('/') ? {textShadow: '0px 4px 8px #E9442B33'} : {}}
                 >
                   HOME
                 </Link>
                 <Link 
                   to="/services" 
-                  className={`transition-colors text-base font-bold ${isActive('/services') ? 'text-[#E9442B]' : 'text-black'}`}
+                  className={`transition-colors text-base font-bold whitespace-nowrap ${isActive('/services') ? 'text-[#E9442B]' : 'text-black'}`}
                 >
                   SERVICES
                 </Link>
                 <Link 
                   to="/blogs" 
-                  className={`transition-colors text-base font-bold ${isActive('/blogs') ? 'text-[#E9442B]' : 'text-black'}`}
+                  className={`transition-colors text-base font-bold whitespace-nowrap ${isActive('/blogs') ? 'text-[#E9442B]' : 'text-black'}`}
                 >
-                  BLOGS
+                  CASE STUDY
                 </Link>
                 <Link 
                   to="/contact" 
-                  className={`transition-colors text-base font-bold ${isActive('/contact') ? 'text-[#E9442B]' : 'text-black'}`}
+                  className={`transition-colors text-base font-bold whitespace-nowrap ${isActive('/contact') ? 'text-[#E9442B]' : 'text-black'}`}
                 >
                   CONTACT US
                 </Link>
@@ -89,10 +89,10 @@ const Navbar = () => {
             </Link>
             <Link 
               to="/blogs" 
-              className={`block py-2 text-base font-bold ${isActive('/blogs') ? 'text-[#E9442B]' : 'text-black'}`}
+              className={`block py-2 text-base font-bold ${isActive('/blogs') ? 'text-[#E9442B] drop-shadow-[0_2px_4px_rgba(233,68,43,0.3)]' : 'text-black'}`}
               onClick={() => setIsMenuOpen(false)}
             >
-              BLOGS
+              CASE STUDY
             </Link>
             <Link 
               to="/contact" 

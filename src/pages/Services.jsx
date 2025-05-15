@@ -37,14 +37,7 @@ const Services = () => {
 
   return (
     <div 
-      className="min-h-screen bg-cover bg-center bg-fixed text-white"
-      style={{ 
-        backgroundImage: `url('/assets/background image.png')`, 
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        position: 'relative',
-      }}
+      className="min-h-screen bg-[#0a0a0a] text-white"
     >
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
