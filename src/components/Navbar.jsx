@@ -65,7 +65,7 @@ const Navbar = () => {
                   to="/blogs" 
                   className={`transition-colors text-base lg:text-xl xl:text-2xl font-sans p-2 ${isActive('/blogs') ? 'text-[#994a42]' : 'text-black hover:text-[#994a42]'} font-semibold`}
                 >
-                  BLOGS
+                  CASE STUDY
                 </Link>
                 <Link 
                   to="/contact" 
