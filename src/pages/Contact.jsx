@@ -11,8 +11,28 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    
+    // Create email content for Gmail
+    const subject = encodeURIComponent("Contact Form Submission from " + formData.name);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}\n\n` +
+      `---\nThis message was sent from the BoldTribe contact form.`
+    );
+    
+    // Create Gmail compose link
+    const gmailLink = `https://mail.google.com/mail/?view=cm&to=support@boldtribe.in&su=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.location.href = gmailLink;
+    
+    // Optional: Clear the form after submission
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
 
   const handleChange = (e) => {

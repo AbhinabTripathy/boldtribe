@@ -183,7 +183,7 @@ const Home = () => {
           {/* Team Member Photos - Horizontal Row with Alternating Up-Down Capsule Shape */}
           <div className="flex flex-wrap pb-8 justify-center items-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 relative w-full">
             {/* Team Member 1 - Top Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
               <img src={rajesh} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Rajesh Kumar</span>
@@ -191,7 +191,7 @@ const Home = () => {
               </div>
             </div>
             {/* Team Member 2 - Bottom Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
               <img src={nikita} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Nikita Pradhan</span>
@@ -200,7 +200,7 @@ const Home = () => {
             </div>
             
             {/* Team Member 3 - Top Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
               <img src={manoranjan || suvendu} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Manoranjan</span>
@@ -209,7 +209,7 @@ const Home = () => {
             </div>
             
             {/* Team Member 4 - Bottom Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
               <img src={arpita || suman} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Arpita Singh</span>
@@ -218,16 +218,16 @@ const Home = () => {
             </div>
             
             {/* Team Member 5 - Top Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
               <img src={suvendu} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
-                <span className="text-white font-bold text-xs sm:text-sm">Suvendhu Rath</span>
+                <span className="text-white font-bold text-xs sm:text-sm">Suvendu Kumar Rath</span>
                 <span className="text-white text-[10px] sm:text-xs">Project Coordinator</span>
               </div>
             </div>
             
             {/* Team Member 6 - Bottom Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
               <img src={suman} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Suman Sahoo</span>
@@ -236,7 +236,7 @@ const Home = () => {
             </div>
             
             {/* Team Member 7 - Top Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md relative group">
               <img src={sivasish} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Sivasish Bebartta</span>
@@ -245,18 +245,18 @@ const Home = () => {
             </div>
             
             {/* Team Member 8 - Bottom Position */}
-            <div className="team-member-capsule flex-shrink-0 h-[180px] sm:h-[240px] md:h-[309px] w-[70px] sm:w-[90px] md:w-[118px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
+            <div className="team-member-capsule flex-shrink-0 h-[190px] sm:h-[240px] md:h-[315px] w-[68px] sm:w-[90px] md:w-[100px] rounded-[40px] sm:rounded-[60px] overflow-hidden border border-gray-200 shadow-md translate-y-[30px] sm:translate-y-[40px] md:translate-y-[60px] relative group">
               <img src={abhinab} alt="Team Member" className="w-full h-full object-cover object-center" />
               <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2 text-center">
                 <span className="text-white font-bold text-xs sm:text-sm">Abhinab Tripathy</span>
-                <span className="text-white text-[10px] sm:text-xs">Lead Generation</span>
+                <span className="text-white text-[10px] sm:text-xs">Manager</span>
               </div>
             </div>
           </div>
         </div>
       </section>
       {/* Onboarding Process - Full Screen */}
-      <section id="onboarding-section" className="min-h-screen w-full relative flex items-center justify-center">
+      <section id="onboarding-section" className="min-h-screen w-full relative flex items-center justify-center pb-16 md:pb-24">
         <div className="bg-[#6b0504] py-4 sm:py-6 text-white text-center text-xl sm:text-3xl md:text-5xl font-bold w-full absolute top-0 left-0 z-20">
           Onboarding Process
         </div>
@@ -294,9 +294,9 @@ const Home = () => {
             </span>
             {/* Step Texts */}
             <div className="flex flex-col mt-[60px] sm:mt-[80px] md:mt-[120px] lg:mt-[180px] max-w-full sm:max-w-[420px] mx-auto md:mx-0 px-2 sm:px-0" style={{ marginRight: '0px', marginBottom: '40px', fontSize: "18px" }}>
-              <span className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold mb-2 tracking-wide transition-all duration-1000 ease-in-out">{content.title}</span>
-              <span className="text-base sm:text-lg md:text-xl mb-4 tracking-wide transition-all duration-1000 ease-in-out">{content.subtitle}</span>
-              <span className="text-sm sm:text-base md:text-lg leading-6 sm:leading-8 tracking-wide transition-all duration-1000 ease-in-out" style={{ letterSpacing: '0.02em' }}>
+              <span className="text-black text-xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold mb-2 tracking-wide transition-all duration-1000 ease-in-out">{content.title}</span>
+              <span className="text-black text-base sm:text-lg md:text-xl mb-4 tracking-wide transition-all duration-1000 ease-in-out">{content.subtitle}</span>
+              <span className="text-black text-sm sm:text-base md:text-lg leading-6 sm:leading-8 tracking-wide transition-all duration-1000 ease-in-out" style={{ letterSpacing: '0.02em' }}>
                 {content.description}
               </span>
             </div>
@@ -357,14 +357,16 @@ const Home = () => {
             
             {/* Partner Button */}
             <div className="inline-block">
-              <Link 
-                to="/contact"
+              <a 
+                href="https://wa.me/917684836139"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-[#f5f5f5] text-[#ff3a2f] font-bold rounded-full shadow-lg hover:opacity-90 transition-all text-sm sm:text-base"
                 style={{ boxShadow: '0 0 15px rgba(255,255,255,0.4)' }}
               >
                 PARTNER WITH US.
                 <img src={whatsapp} alt="WhatsApp" className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

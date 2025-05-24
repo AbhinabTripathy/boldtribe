@@ -238,7 +238,7 @@ const CaseStudyDetail = () => {
   const study = caseStudyContent[slug];
 
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
+    <div className="bg-[#6b0504] text-white min-h-screen">
       <Navbar />
       <div className="max-w-3xl mx-auto px-4 py-10">
         <Link to="/blogs" className="text-blue-400 hover:underline mb-6 inline-block">← Back to Case Studies</Link>
