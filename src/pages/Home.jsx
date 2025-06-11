@@ -300,6 +300,22 @@ const Home = () => {
                 {content.description}
               </span>
             </div>
+
+            {/* Dots Navigation */}
+            <div className="flex justify-center items-center gap-2 mt-4">
+              {[1, 2, 3].map((step) => (
+                <button
+                  key={step}
+                  onClick={() => setCurrentStep(step)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentStep === step 
+                      ? 'bg-yellow-400 scale-125' 
+                      : 'bg-gray-400 hover:bg-gray-500'
+                  }`}
+                  aria-label={`Go to step ${step}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

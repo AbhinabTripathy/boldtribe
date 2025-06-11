@@ -34,16 +34,18 @@ const Navbar = () => {
 
   return (
     <div className="relative w-full">
-      <div className={`relative bg-[#d9c6c6] shadow-md transition-all duration-300 ${scrolled ? 'sticky top-0 z-50' : ''}`}>
+      <div className={`relative bg-[#d9c6c6] shadow-md transition-all duration-300 ${scrolled ? 'sticky top-0 z-[100]' : 'z-[100]'}`}>
         <div className="w-full mx-auto" style={{ padding: "0 0" }}>
           <nav className="flex items-center w-full">
             {/* Logo */}
             <div className="flex-shrink-0 pl-4 sm:pl-6 md:pl-8">
-              <img 
-                src={logo}
-                alt="BoldTribe" 
-                className="h-16 sm:h-20 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src={logo}
+                  alt="BoldTribe" 
+                  className="h-16 sm:h-20 w-auto"
+                />
+              </Link>
             </div>
             
             {/* Desktop Menu */}
@@ -92,10 +94,12 @@ const Navbar = () => {
       
       {/* Mobile Menu Panel */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40">
-          <div className="absolute top-0 right-0 h-full w-3/4 max-w-sm bg-white shadow-lg transform transition-transform ease-in-out duration-300 z-50 overflow-y-auto">
+        <div className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-[99]">
+          <div className="absolute top-0 right-0 h-full w-3/4 max-w-sm bg-white shadow-lg transform transition-transform ease-in-out duration-300 z-[101] overflow-y-auto">
             <div className="flex justify-between items-center p-4 border-b border-gray-200">
-              <img src={logo} alt="BoldTribe" className="h-12 w-auto" />
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                <img src={logo} alt="BoldTribe" className="h-12 w-auto" />
+              </Link>
               <button 
                 onClick={toggleMenu}
                 className="p-2 rounded-md text-black hover:bg-red-100 focus:outline-none"
@@ -126,7 +130,7 @@ const Navbar = () => {
                 className={`block py-3 text-lg font-sans border-b border-gray-100 ${isActive('/blogs') ? 'text-red-600 font-bold' : 'text-black hover:text-red-600'}`}
                 onClick={() => setIsMenuOpen(false)}
               >
-                BLOGS
+                CASE STUDY
               </Link>
               <Link 
                 to="/contact" 

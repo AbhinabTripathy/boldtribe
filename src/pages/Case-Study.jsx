@@ -90,11 +90,11 @@ const CaseStudy = () => {
             {/* Page Title (Center) */}
             <div className="flex flex-col items-center justify-center mx-auto">
               <h1 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold">Case Study</h1>
-              <div className="flex items-center justify-center gap-2 text-gray-400 mt-1 text-xs xs:text-sm sm:text-base">
+              {/* <div className="flex items-center justify-center gap-2 text-gray-400 mt-1 text-xs xs:text-sm sm:text-base">
                 <Link to="/" className="hover:text-white">Home</Link>
                 <span>|</span>
                 <span>Case Study</span>
-              </div>
+              </div> */}
             </div>
 
             {/* Search Bar (Right) */}

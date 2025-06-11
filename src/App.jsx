@@ -4,6 +4,8 @@ import Services from './pages/Services';
 import CaseStudy from './pages/Case-Study';
 import CaseStudyDetail from './pages/CaseStudyDetail';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import About from './pages/About';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -18,6 +20,8 @@ function App() {
             <Route path="/blogs" element={<CaseStudy />} />
             <Route path="/case-study/:slug" element={<CaseStudyDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
         <Footer />

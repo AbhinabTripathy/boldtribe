@@ -1,8 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const Footer = () => {
   const [acceptedCookies, setAcceptedCookies] = useState(false);
+  const navigate = useNavigate();
+
+  const handleReportBug = (e) => {
+    e.preventDefault();
+    alert("You can report the bug here by sending the message");
+    navigate('/contact');
+  };
 
   return (
     <footer className="bg-white text-black pt-10 sm:pt-12 md:pt-16 pb-6 sm:pb-8 border-t border-gray-200">
@@ -13,9 +20,7 @@ const Footer = () => {
           <h6 className="text-sm font-bold uppercase text-gray-700 mb-3 sm:mb-4">COMPANY</h6>
           <ul className="space-y-2">
             <li><Link to="/contact" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Contact Us</Link></li>
-            <li><Link to="/faq" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">FAQ</Link></li>
-            <li><Link to="/report" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Report A Bug</Link></li>
-            <li><Link to="/careers" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Careers</Link></li>
+            <li><a href="#" onClick={handleReportBug} className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Report A Bug</a></li>
             <li><Link to="/about" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">About Us</Link></li>
           </ul>
         </div>
@@ -25,8 +30,8 @@ const Footer = () => {
           <h6 className="text-sm font-bold uppercase text-gray-700 mb-3 sm:mb-4">SUPPORT</h6>
           <ul className="space-y-2">
             <li><Link to="/privacy-policy" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Privacy Policy</Link></li>
-            <li><Link to="/jobs" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Jobs</Link></li>
-            <li><a href="https://www.linkedin.com/company/boldtribe" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/company/boldtribe-innovations/jobs/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Jobs</a></li>
+            <li><a href="https://www.linkedin.com/company/boldtribe-innovations/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Linkedin</a></li>
             <li><Link to="/community" className="text-gray-600 hover:text-red-600 transition text-sm sm:text-base">Community</Link></li>
           </ul>
         </div>
